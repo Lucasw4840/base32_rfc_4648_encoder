@@ -1,0 +1,14 @@
+[project]
+name = "base32-rfc-4648-encoder"
+version = "0.1.0"
+description = "Provides standard Base32 encoding and decoding per RFC 4648, including padding and case sensitivity handling."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
