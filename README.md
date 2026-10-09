@@ -26,3 +26,10 @@ The trade-off is strictness over convenience. There is no option to skip padding
 
 - `encode(data: bytes) -> str`
 - `decode(text: str) -> bytes`
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
